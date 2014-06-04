@@ -1,0 +1,89 @@
+<?
+	include "fungsi.php";
+	$conn = connectdb();
+	
+?>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Tahu Pintar!</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="judul">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-12">
+                    <img class="img-responsive center-block" src="img/kategori/judul.kategori.png" height="68" width="289" alt=""></img>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="judul">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="col-md-4">
+                        <a href="belajar.php?num=1"><img class="img-responsive center-block" src="img/kategori/kotak.kategori.transportasi.png" height="87" width="83" alt=""></img></a>
+                        <h5><b>Transportasi</b></h5>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img class="img-responsive center-block" src="img/kategori/kategori.kunci.png" height="87" width="83" alt=""></img></a>
+                        <h5><b>Alat Makan</b></h5>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img class="img-responsive center-block" src="img/kategori/kategori.kunci.png" height="87" width="83" alt=""></img></a>
+                        <h5><b>Alat Dapur</b></h5>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row centered" style="padding-top: 40px; padding-bottom: 40px">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="col-md-4">
+                        <a href="#"><img class="img-responsive center-block" src="img/kategori/kategori.kunci.png" height="87" width="83" alt=""></img></a>
+                        <h5><b>Alat Kebersihan</b></h5>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img class="img-responsive center-block" src="img/kategori/kategori.kunci.png" height="87" width="83" alt=""></img></a>
+                        <h5><b>Alat Sekolah</b></h5>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img class="img-responsive center-block" src="img/kategori/kategori.kunci.png" height="87" width="83" alt=""></img></a>
+                        <h5><b>Mainan</b></h5>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row centered">
+                <div class="row centered" style="padding-top: 10px">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <!-- <a href="index.php"><img class="img-responsive center-block" src="img/tombol.kembali.png" height="36" width="34" alt=""></img></a> -->
+                        </div>
+                        <div class="col-md-4">
+                            <a href="index.php"><img class="img-responsive center-block" src="img/tombol.beranda.png" height="36" width="34" alt=""></img></a>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- <a href="index.php"><img class="img-responsive center-block" src="img/tombol.lanjut.png" height="36" width="34" alt=""></img></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
