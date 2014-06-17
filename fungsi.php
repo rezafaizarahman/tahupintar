@@ -9,9 +9,9 @@
 		
 		return $conn;
 	}
-	function creatcookie(){
-		setcookie("skor",0);
-		setcookie("nama","user1");
+	function creatcookie($skor,$user){
+		setcookie("skor",$skor);
+		setcookie("nama",$user);
 
 	}
 	function benar(){

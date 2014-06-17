@@ -33,7 +33,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <div class="col-md-4">
-                        <a href="kuis.php?num=1"><img class="img-responsive center-block" src="img/kategori/kotak.kategori.transportasi.png" height="87" width="83" alt=""></img></a>
+                        <a href="kuis.php?num=1&kateg=1"><img class="img-responsive center-block" src="img/kategori/kotak.kategori.transportasi.png" height="87" width="83" alt=""></img></a>
                         <h5><b>Transportasi</b></h5>
                     </div>
                     <div class="col-md-4">

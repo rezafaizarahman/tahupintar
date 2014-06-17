@@ -1,7 +1,6 @@
 <?
 	include "fungsi.php";
 	$conn = connectdb();
-	creatcookie();
 	
 ?>
 <!doctype html>
@@ -41,7 +40,7 @@
                     <div class="col-md-4"></div>
                 </div>
                 <div class="col-md-12 centered" style="padding: 20px">
-                    <a href="kategori-kuis.php">
+                    <a href="input-nama.php">
                         <img class="img-responsive center-block" src="img/tombol.kuis.png" height="45" width="185" alt=""></img>
                     </a>
                 </div>

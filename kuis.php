@@ -1,4 +1,4 @@
-<?
+<?php
 	include "fungsi.php";
 	$conn = connectdb();
 
@@ -6,6 +6,7 @@
 	
 	$rand = rand(1,6);
 	$num = $_GET['num'];
+	$kateg = $_GET['kateg'];
 	$soal=$conn -> query("SELECT * FROM soal where id_gbr=".$num." AND id_x=".$rand);
 	$soal=$soal -> fetch(PDO::FETCH_ASSOC);
 
@@ -15,16 +16,8 @@
 	$kiri=$conn -> query("SELECT * FROM gambar where id_gbr=".$soal['left']);
 	$kiri=$kiri -> fetch(PDO::FETCH_ASSOC);
 
-
-
 	$jawab=$conn -> query("SELECT * FROM gambar where id_gbr=".$soal['id_gbr']);
 	$jawab=$jawab -> fetch(PDO::FETCH_ASSOC);
-	if($num < 6){
-		$num++;
-	}else{
-		uploadnilai();
-	}
-
 ?>
 <!doctype html>
 <html>
@@ -56,13 +49,13 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <div class="col-md-5" style="padding-top: 20px">
-                        <a href="?num=<?php echo $num.'&jwb='.$soal['left'].'&ids='.$soal['id_soal']; ?>"><img class="img-responsive center-block" src="img/kategori/transportasi/gambar/<?php echo $kiri['src_gbr']; ?>" height="180" width="174" alt=""></img></a>
+                        <a href="logika-kuis.php?num=<?php echo $num.'&jwb='.$soal['left'].'&ids='.$soal['id_soal']; ?>"><img class="img-responsive center-block" src="img/kategori/transportasi/gambar/<?php echo $kiri['src_gbr']; ?>" height="180" width="174" alt=""></img></a>
                     </div>
                     <div class="col-md-2">
                         <!-- <img class="img-responsive center-block" src="img/kategori/transportasi/gambar/transportasi.sepedamotor.gambar.png" height="180" width="174" alt=""></img> -->
                     </div>
                     <div class="col-md-5" style="padding-top: 20px">
-                        <a href="?num=<?php echo $num.'&jwb='.$soal['right'].'&ids='.$soal['id_soal']; ?>"><img class="img-responsive center-block" src="img/kategori/transportasi/gambar/<?php echo $kanan['src_gbr']; ?>" height="180" width="174" alt=""></img></a>
+                        <a href="logika-kuis.php?num=<?php echo $num.'&jwb='.$soal['right'].'&ids='.$soal['id_soal']; ?>"><img class="img-responsive center-block" src="img/kategori/transportasi/gambar/<?php echo $kanan['src_gbr']; ?>" height="180" width="174" alt=""></img></a>
                     </div>
                 </div>
                 <div class="col-md-3"></div>
@@ -92,16 +85,5 @@
 </body>
 
 </html>
-<?php
-	if(isset($_GET['ids'])){
-		$koreksi=$conn -> query("SELECT * FROM soal where id_soal=".$_GET['ids']);
-		$koreksi=$koreksi -> fetch(PDO::FETCH_ASSOC);
-		
-		if($_GET['jwb']==$koreksi['id_gbr']){
-			benar();
-		}else{
-			salah();
-		}
-	}
- ?>
+
 

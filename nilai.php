@@ -2,6 +2,8 @@
 	include "fungsi.php";
 	$conn = connectdb();
 	
+	$nilai=$conn -> query("SELECT * FROM user ORDER BY nilai");
+	
 ?>
 <!doctype html>
 <html>
@@ -40,30 +42,7 @@
                             <img src="img/kotaknama.png" height="33" width="178" alt="">
                         </div>
                     </div>
-                    <div class="row centered" style="padding: 10px;">
-                        <div class="col-md-4">
-                            <img src="img/kotaknomor.png" height="33" width="65" alt="">
-                        </div>
-                        <div class="col-md-8">
-                            <img src="img/kotaknama.png" height="33" width="178" alt="">
-                        </div>
-                    </div>
-                    <div class="row centered" style="padding: 10px;">
-                        <div class="col-md-4">
-                            <img src="img/kotaknomor.png" height="33" width="65" alt="">
-                        </div>
-                        <div class="col-md-8">
-                            <img src="img/kotaknama.png" height="33" width="178" alt="">
-                        </div>
-                    </div>
-                    <div class="row centered" style="padding: 10px;">
-                        <div class="col-md-4">
-                            <img src="img/kotaknomor.png" height="33" width="65" alt="">
-                        </div>
-                        <div class="col-md-8">
-                            <img src="img/kotaknama.png" height="33" width="178" alt="">
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="col-md-4"></div>
             </div>
